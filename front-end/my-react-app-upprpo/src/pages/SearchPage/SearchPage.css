@@ -1,0 +1,154 @@
+.SearchPage {
+  text-align: center;
+  background-color: #e0e0e0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-box {
+  width: 50px;
+  height: 50px;
+  background-color: #ddd; /* Замените на желаемый цвет фона или изображение */
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-icon {
+  width: 100%;
+  height: auto;
+}
+
+.profile-button {
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Пример цвета фона для кнопки */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-container {
+  margin-top: 30px;
+  width: 100%;
+  padding: 20px 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-title {
+  color: #00aeff;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Добавляем тень к тексту */
+  font-size: 48px; /* Увеличиваем размер шрифта */
+}
+
+.search-bar {
+  width: 50%;
+  padding: 10px 20px;
+  margin-bottom: 50px;
+  font-size: 16px;
+  border: 2px solid #000000;
+  border-radius: 20px;
+}
+
+.user-cards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  overflow: auto;
+}
+
+.user-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрируем содержимое карточки */
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.user-card img {
+  width: 100%; /* Занимает полную ширину своего контейнера */
+  height: auto; /* Высота автоматически изменяется, чтобы сохранить пропорции изображения */
+  aspect-ratio: 1 / 1; /* Сохраняем соотношение сторон 1:1 */
+  margin: 10px 0; /* Отступы только сверху и снизу */
+  border-radius: 5px; /* Слегка закругляем углы */
+  object-fit: cover; /* Обрезка изображения по контейнеру, сохраняя аспект */
+}
+
+.user-card h2 {
+  padding: 0 10px; /* Добавляем горизонтальные отступы к заголовку */
+  margin: 5px 0; /* Небольшой отступ сверху и снизу */
+  color: #333;
+  font-size: 18px;
+}
+
+/* Добавление анимации для текста при наведении */
+.user-card h2:hover {
+  color: #00aeff; /* Изменение цвета текста */
+}
+
+.user-description, .user-hobbies {
+  margin: 5px 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow: hidden; /* Обрезка содержимого, выходящего за рамки */
+  text-overflow: ellipsis; /* Троеточие, если текст не помещается */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6; /* Ограничиваем количество строк до двух */
+  word-break: break-word; /* Позволяет переносить очень длинные слова */
+  height: 180px; /* Фиксированная высота для описания и хобби */
+  width: 100%; /* Ширина блока равна ширине карточки */
+}
+
+.user-description {
+  background-color: #f2f2f2;
+  height: 160px; /* Фиксированная высота для описания */
+  color: #333;
+  font-size: 16px; /* Динамический размер шрифта */
+}
+
+.user-hobbies {
+  background-color: #e0f4fd; /* Голубоватый фон для хобби */
+  height: 80px; /* Фиксированная высота для хобби */
+  color: #666;
+  font-size: 14px; /* Динамический размер шрифта */
+}
+
+.user-hobbies-container {
+  display: flex;
+  flex-wrap: wrap; /* Позволяет элементам переноситься на следующую строку */
+  gap: 10px; /* Отступы между элементами */
+  max-height: 120px; /* Предполагаем, что высота одной строки ~30px */
+  overflow: hidden;
+}
+
+.user-hobby {
+  background-color: #e0f4fd; /* Голубоватый фон для каждого хобби */
+  padding: 5px 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  white-space: nowrap;
+}

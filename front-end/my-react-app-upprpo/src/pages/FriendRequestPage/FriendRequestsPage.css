@@ -1,0 +1,73 @@
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffe6f2; /* мягко голубой фон */
+}
+body {
+    background-color: #ffe6f2; /* мягко розовый фон */
+}
+
+.title {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.sub-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.rainbow-text {
+    display: inline-block;
+    background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.friend-list {
+    list-style: none;
+    padding: 0;
+}
+
+.friend-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.friend-list-item:hover {
+    background-color: #eaeaea;
+}
+
+.add-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.add-button:hover {
+    background-color: #45a049;
+}
+
+.cancel-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.cancel-button:hover {
+    background-color: #d32f2f;
+}
